@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+:root{
+    /* Colors */
+    --dark-blue: rgb(32, 64, 81);
+    --dark-blue-blur:rgb(32, 64, 81, .8);
+    --blue:#3b6978;
+    --light-blue: #84a9ac;
+    --light-yellow:#e7dfd5;
+    /*  */
+}
+
+html{
+    font-size: 62.5%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* ============================
+    HEADER SECTION
+   ============================ */
+
+.navbar{
+    width: 100%;
+    height: 80px;
+    background: var(--dark-blue);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+}
+
+.logo{
+    height: 100%;
+}
+
+.logo img{
+    height: 100%;
+}
+
+/* MENU HAMBURGUESA */
+
+.menu-hamburger{
+    width: 35px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.line{
+    width: 35px;
+    height: 6px;
+    background: azure;
+    border-radius: 5px;
+    position: relative;
+    transition: .5s all ease-in-out;
+}
+
+.line_1{
+    position: absolute;
+    transform: rotate(-315deg);
+    transition: .5s all ease-in-out;
+}
+
+.line_2{
+    position: absolute;
+    transform: scale(0);
+    transition: .5s all ease-in-out;
+}
+
+.line_3{
+    position: absolute;
+    transform: rotate(315deg);
+    transition: .5s all ease-in-out;
+}
+
+/* NAV LIST */
+.navlist{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--dark-blue-blur);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: azure;
+    border-radius: 50%;
+    gap: 20px;
+    opacity: 0;
+    transform: translate(100%);
+    transition: all .5s ease-out;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 999;
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+
+.show{
+    opacity: 100;
+    border-radius: 0;
+    transform: translate(0);
+    transition: all .5s ease-in;
+}
+
+.navlist-link{
+    width: 80%;
+    text-align: center;
+    
+    border-radius: 10px;
+    padding: 15px 0;  
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+    transition: all .5s ease-out;
+}
+
+.fondo{
+    width: 100%;
+    height: 300px;
+    border-radius: 50%;
+    background-color: rgba(231, 231, 231, 0.2);
+    position: absolute;
+    top: -100px;
+    left: -10%;
+    transform: translateX(-100%);
+    transition: .5s all ease-out;
+}
+
+.navlist-link:hover{
+    color: black;
+    background: rgb(255, 210, 49, .8);
+    transition: all .5s ease-in;
+}
+.navlist-link:hover  .fondo{
+   transform: translateX(0);
+   transition: .5s all ease-in;
+}
+
+
