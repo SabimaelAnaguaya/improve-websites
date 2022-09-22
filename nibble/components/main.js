@@ -10,4 +10,17 @@ function openMenu(){
     list.classList.toggle('show');
 }
 
-menu.addEventListener('click', openMenu)
+menu.addEventListener('click', openMenu);
+
+
+let mainUbication = window.pageXOffset;
+window.onscroll = function(){
+    let actualScroll = window.pageYOffset;
+    if(mainUbication >= actualScroll){
+        document.querySelector('.navbar').style.top = '0';
+    }else{
+        document.querySelector('.navbar').style.top = '-100px';
+    }
+
+    mainUbication = actualScroll;
+}
