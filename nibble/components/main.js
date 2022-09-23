@@ -14,12 +14,13 @@ menu.addEventListener('click', openMenu);
 
 
 let mainUbication = window.pageXOffset;
+let navbar = document.querySelector('.navbar');
 window.onscroll = function(){
     let actualScroll = window.pageYOffset;
     if(mainUbication >= actualScroll){
-        document.querySelector('.navbar').style.top = '0';
+        navbar.classList.remove('hide-navbar')
     }else{
-        document.querySelector('.navbar').style.top = '-100px';
+        navbar.classList.add('hide-navbar');
     }
 
     mainUbication = actualScroll;

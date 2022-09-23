@@ -36,4 +36,23 @@
     padding: 8px 15px;
 }
 
+.text-introduce{
+    width: 100%;
+    max-width: 750px;
+    min-width: 450px;
+    height: 230px;
+    padding: 20px;
+    background: rgb(255, 255, 0, .5);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    text-align: center;
+}
+.text-introduce h1{
+    font-size: 3rem;
+}
+
+.text-introduce h2{
+    font-size: 2.1rem;
+
+}
 }
